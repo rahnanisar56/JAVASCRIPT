@@ -6,17 +6,18 @@
     <title>Classwork 1</title>
 </head>
 <body>
+    <p id="earnings"></p>
+    <p id="updated_earnings"></p>
     <script>
         let tshirt_q= 5;
         let tshirt_p= 400;
         let cap_q= 3;
         let cap_p= 150;
         let totalearning= (tshirt_q*tshirt_p)+(cap_q*cap_p);
-        document.write("Total Earnings:-"+ totalearning);
+        document.getElementById("earnings").innerHTML= "Total Earnings:-"+""+totalearning;
         tshirt_p= 450;
         totalearning= (tshirt_q*tshirt_p)+(cap_q*cap_p);
-        document.write("Updated Total Earnings:-"+ totalearning);
-
+        document.getElementById("updated_earnings").innerHTML= "Updated Total Earnings:-"+""+totalearning;
     </script>
     
 </body>
