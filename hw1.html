@@ -12,19 +12,19 @@
     <p id="total_bill"></p>
     <p id="updated_bill"></p>
     <script>
-        let name1= "Rice", rice_price= 50, rice_qty= 2;
-        let name2= "Sugar", sugar_price = 40, sugar_qty = 3;
-        let name3= "Wheat", wheat_price= 30, wheat_qty= 4;
-        let rice_cost= rice_price*rice_qty;
+        var name1= "Rice", rice_price= 50, rice_qty= 2;
+        var name2= "Sugar", sugar_price = 40, sugar_qty = 3;
+        var name3= "Wheat", wheat_price= 30, wheat_qty= 4;
+        var rice_cost= rice_price*rice_qty;
         document.getElementById("rice").innerHTML= "Cost for Rice:- ₹"+ rice_cost;
         console.log("Rice Cost: ₹" + rice_cost);
-        let sugar_cost= sugar_price*sugar_qty;
+        var sugar_cost= sugar_price*sugar_qty;
         document.getElementById("sugar").innerHTML= "Cost for Sugar:- ₹"+ sugar_cost;
         console.log("Sugar Cost: ₹"+ sugar_cost);
-        let wheat_cost= wheat_price*wheat_qty;
+        var wheat_cost= wheat_price*wheat_qty;
         document.getElementById("wheat").innerHTML= "Cost for Wheat:- ₹"+ wheat_cost;
         console.log("Wheat Cost: ₹"+ wheat_cost);
-        let total_bill= rice_cost+sugar_cost+wheat_cost;    
+        var total_bill= rice_cost+sugar_cost+wheat_cost;    
         document.getElementById("total_bill").innerHTML= "Total Bill :- ₹"+ total_bill;
         console.log("Total Bill: ₹"+ total_bill)
         rice_qty= 4;
