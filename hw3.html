@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let userProfile = {
+            username :" CoolUser99 ",
+            bio : " I LOVE coding! JavaScript is Great!!! "
+        };
+        function cleanUserBio(profile) {
+            let cleanUserName = profile.username.trim().toLowerCase();
+            let clean_bio = profile.bio.trim().toLowerCase();
+            clean_bio = clean_bio.replace(/javascript/g,"JS");
+            let bio_length = clean_bio.length;
+        return{
+            username : cleanUserName,
+            bio : clean_bio,
+            length : bio_length 
+        };
+    }
+    console.log(cleanUserBio(userProfile));
+    </script>
+</body>
+</html>
