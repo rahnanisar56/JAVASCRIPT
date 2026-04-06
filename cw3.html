@@ -9,10 +9,12 @@
     <script>
         function myFunction() {
             var feedback = "   I loved the FOOD and the service!   ";
-            console.log(feedback.trim());
-            console.log(feedback.toLowerCase());
-            var txt= feedback.replace("FOOD","ambience");
-            console.log(txt);
+            feedback = feedback.trim();
+            console.log(feedback);
+            feedback = feedback.toLowerCase();
+            console.log(feedback);
+            feedback = feedback.replace("food", "ambience");
+            console.log(feedback);
             var pos = feedback.indexOf("service");
             console.log(pos);
             var output = feedback.split(" ");
