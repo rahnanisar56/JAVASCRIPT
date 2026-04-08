@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="prodStatus()">Click here</button>
+    <p id="updation"></p>
+    <script>
+        let order = {
+            itemName : "Bag",
+            isDelivered : true ,
+            daysSinceDelivery : 4
+        }
+        let condition = (order.isDelivered==true && order.daysSinceDelivery <= 7) ? "Eligible for return": "Return Period Expired";
+        function prodStatus(){
+        document.getElementById("updation").innerHTML= condition;
+        }
+        console.log("itemName exists:", "itemName" in order);
+        delete order.daysSinceDelivery;
+
+    </script>
+</body>
+</html>
