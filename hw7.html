@@ -16,12 +16,10 @@
     <script>
         function checkDate() {
             let inputDate = document.getElementById("dateInput").value;
-
-            if (!inputDate) {
-                document.getElementById("output").innerText = "Please select a date!";
-                return;
+            let result = inputDate ? processDate(inputDate) : "Please select a date!";
+            document.getElementById("output").innerHTML = result;
             }
-
+            function processDate(inputDate) {
             let date = new Date(inputDate);
             let year = date.getFullYear();
             let day = date.getDate();
@@ -31,22 +29,18 @@
             let today = new Date();
             let yearsPassed = today.getFullYear() - year;
 
-            if (
+            yearsPassed -= (
                 today.getMonth() < date.getMonth() ||
                 (today.getMonth() === date.getMonth() && today.getDate() < date.getDate())
-            ) {
-                yearsPassed--;
-            }
-            let message = "";
-            if (yearsPassed >= 1) {
-                message = "It has been more than a year since that date.";
-            } else {
-                message = "It has been less than a year since that date.";
-            }
-            let result = `Selected date: ${day} ${monthName}, ${year} <br>
-                          Years passed: ${yearsPassed} <br>
-                          ${message}`;
-            document.getElementById("output").innerHTML = result;
+            ) ? 1 : 0;
+
+            let message = yearsPassed >= 1
+                ? "It has been more than a year since that date."
+                : "It has been less than a year since that date.";
+
+            return `Selected date: ${day} ${monthName}, ${year} <br>
+                    Years passed: ${yearsPassed} <br>
+                    ${message}`;
         }
     </script>
 </body>
