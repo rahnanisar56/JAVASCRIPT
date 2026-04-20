@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class User {
+            constructor(name, age, email) {
+                this.name = name;
+                this.age = age;
+                this.setEmail(email);
+            }
+
+
+            getName() {
+                return this.name;
+            }
+
+
+            getAge() {
+                return this.age;
+            }
+
+
+            setEmail(newEmail) {
+                if (typeof newEmail === "string" && newEmail.includes("@")) {
+                    this.email = newEmail;
+                } else {
+                    console.log("Invalid email. Must contain '@'.");
+                }
+            }
+
+
+            getDetails() {
+                return `Name: ${this.name}, Age: ${this.age}, Email: ${this.email}`;
+            }
+        }
+
+
+        const user1 = new User("Akash", 25, "akash@gmail.com");
+
+
+        user1.setEmail("akashgmail.com");
+
+
+        user1.setEmail("akash@gmail.com");
+
+
+        console.log("Name:", user1.getName());
+        console.log("Age:", user1.getAge());
+        console.log("All Details:", user1.getDetails());
+    </script>
+</body>
+
+</html>
