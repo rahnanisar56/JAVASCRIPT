@@ -32,15 +32,15 @@
   </div>
     </div>
     <script>
-        let lottery  = [11334,22456,33214,44630,55643]
+        let lottery  = [11334,22456,33214,44630,55643];
         function draw(){
-            let randomTicket = Math.floor(Math.random()*lottery.length)
-            let winner = lottery[randomTicket]
-            document.getElementById("result").innerHTML = "Winner is "+winner
-            console.log(`Winner is ${winner}`)
-            document.getElementById("modalResult").innerHTML=winner
+            let randomTicket = Math.floor(Math.random()*lottery.length);
+            let winner = lottery[randomTicket];
+            document.getElementById("result").innerHTML = "Winner is "+winner;
+            console.log(`Winner is ${winner}`);
+            document.getElementById("modalResult").innerHTML=winner;
             
-        }
+        };
     </script>
 </body>
 </html>
